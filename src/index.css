@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Poppins", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-bg: #0B0F19;
+  --color-brand-secondary: #111827;
+  --color-brand-accent: #00E5FF;
+  --color-brand-accent-purple: #8B5CF6;
+}
+
+/* Custom scrollbar and ambient cursor glow utility classes */
+html {
+  scroll-behavior: smooth;
+  background-color: #0B0F19;
+}
+
+::selection {
+  background: rgba(0, 229, 255, 0.2);
+  color: #00E5FF;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+/* Immersive UI Specific CSS Styles */
+:root {
+  --bg: #0B0F19;
+  --card: #111827;
+  --accent: #00E5FF;
+  --accent2: #8B5CF6;
+  --text-main: #FFFFFF;
+  --text-dim: #9CA3AF;
+}
+
+.glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,229,255,0.15) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
+  bottom: -150px;
+  right: -150px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-dim);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card {
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 15px;
+}
+
+.stat-val {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
